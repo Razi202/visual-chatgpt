@@ -23,6 +23,10 @@ jobs:
         pip install -r requirements.txt
         pip freeze > requirements.txt
         
+    - name: Install pylint
+      run: |
+        pip install pylint
+        
     - name: Create pylintrc file
       run: |
         pylint --generate-rcfile > .pylintrc
